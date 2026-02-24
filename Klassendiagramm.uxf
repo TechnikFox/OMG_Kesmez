@@ -1,0 +1,73 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>510</x><y>413</y><w>189</w><h>171</h></coordinates><panel_attributes>XMLModel
+--
+- view: IView
+- controller: IController
+-
++speichern(XMLDatensatz:Datensatz)
++suchen(XMLDatensatz:Datensatz)
++löschen(XMLDatensatz:Datensatz)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>825</x><y>539</y><w>189</w><h>171</h></coordinates><panel_attributes>Controller
+--
+- model: Imodel
+- view: Iview
+-
++speichern(XMLDatensatz:Datensatz)
++suchen(XMLDatensatz:Datensatz)
++löschen(XMLDatensatz:Datensatz)
+
++anzeigen(Datensaetze:List&lt;Datensatz&gt;)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>665</y><w>297</w><h>315</h></coordinates><panel_attributes>View
+--
+- model: IModel
+- controller: IController
+
+-labelText:Label
+-textBoxText:Textbox
+
+-buttonSpreichern:Button
+-buttonSuchen:Button
+-buttonLoeschen:Button
+--
+- buttonSpeichern_Click(sender:object.e:EventArgs)
+- buttonSuchen_Click(sender:object.e:EventArgs)
+- buttonLoeschen_Click(sender:object.e:EventArgs)
+-
++anzeigen(Datensatz:List&lt;Datensatz&gt;))
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>152</y><w>189</w><h>171</h></coordinates><panel_attributes>XMLDatensatz
+--
+pathFilename:string
+text:string
+-
++setPathFilename(pathFilename:string)
++getPathFilename():string
+
++getText(text.string)
++getText():string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>528</x><y>152</y><w>189</w><h>171</h></coordinates><panel_attributes>Programm
+--
+- _model:Imodel_
+- _view:Iview_
+- _controller:Icontroller_
+-
++main(args:String[])</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>366</x><y>683</y><w>162</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;160;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>132</x><y>656</y><w>243</w><h>126</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+IView
+--
++setModel(model:Imodel)
++setContreoller(controller:IController)
+
++anzeigen(Datensaetze:List&lt;Datensatz&gt;)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1140</x><y>584</y><w>234</w><h>162</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+IController
+--
++setView(view:IView)
++setModel(model:IModel)
+
++speichern(XMLDatensatz:Datensatz)
++suchen(XMLDatensatz:Datensatz)
++löschen(XMLDatensatz:Datensatz)
+
++anzeigen(Datensaetze:List&lt;Datensatz&gt;)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1005</x><y>584</y><w>153</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>150;30;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>141</x><y>458</y><w>225</w><h>153</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+IModel
+--
++setView(view:IView)
++setController(controller:IController)
+
++speichern(XMLDatensatz:Datensatz)
++suchen(XMLDatensatz:Datensatz)
++löschen(XMLDatensatz:Datensatz)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>357</x><y>467</y><w>171</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;30;170;10</additional_attributes></element></diagram>
