@@ -10,3 +10,4 @@ namespace OMG_Kesmez
     {
     }
 }
+// Esat Selamün aleyküm diyo
